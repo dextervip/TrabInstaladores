@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="RPV" default="build" basedir=".">
+    <property name="xampp.download.url" value="http://downloads.sourceforge.net/project/xampp/XAMPP%20Windows/1.8.0/xampp-win32-1.8.0-VC9.zip?r=http%3A%2F%2Fsourceforge.net%2Fprojects%2Fxampp%2Ffiles%2FXAMPP%2520Windows%2F1.8.0%2F&amp;ts=1348467417&amp;use_mirror=ufpr" /> 
+    <property name="downloads.dir" value="./downloads" />
+    <property name="xampp.filename" value="xampp-win32-1.8.0-VC9.zip" />
+    <property name="xampp.distro" value="${downloads.dir}/${xampp.filename}" />
+    <available property="is.xampp.available" file="${xampp.distro}" />
+
+    <target name="internal.xampp.download" unless="is.xampp.available">
+        <mkdir dir="${downloads.dir}" />
+        <get src="${xampp.download.url}" dest="${xampp.distro}" />
+    </target>
+  
+    <target name="build" depends="internal.xampp.download"/>
+</project>

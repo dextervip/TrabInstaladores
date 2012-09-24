@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<installation version="1.0">
+    <info>
+        <appname>Baralho</appname>
+        <appversion>2.0 beta</appversion>
+        <appsubpath>GrupoPHP/Baralho</appsubpath>
+        <url>https://github.com/dextervip/TrabBiblioteca</url>
+        <authors>
+            <author name="Rafael" email="jrtadf arroba gmail ponto com"/>
+        </authors>
+        <javaversion>1.2</javaversion>
+        <requiresjdk>no</requiresjdk>
+        <run-privileged condition="izpack.windowsinstall|izpack.macinstall"/>
+    </info>
+    
+    <locale>
+        <langpack iso3="por"/>
+    </locale>
+    
+    <resources>
+        <res id="LicencePanel.licence" src="@{install.res}/COPYING" type="plain" parse="yes"/>
+        <res id="HTMLInfoPanel.info" src="@{install.res}/README" type="plain" parse="yes"/>
+    </resources>
+    
+    <panels>
+        <panel classname="HelloPanel"/>
+        <panel classname="HTMLInfoPanel"/>
+        <panel classname="LicencePanel"/>
+        <panel classname="TargetPanel"/>
+        <panel classname="InstallationGroupPanel"/>
+        <panel classname="PacksPanel"/>
+        <panel classname="SummaryPanel"/>
+        <panel classname="InstallPanel"/>
+        <panel classname="ProcessPanel"/>
+        <panel classname="SimpleFinishPanel"/>
+    </panels>
+    
+    <pack name="Core" required="yes" preselect="yes">
+        
+    </pack>
+          
+    <native type="izpack" name="ShellLink.dll"/>
+    <native type="izpack" name="ShellLink_x64.dll"/>
+
+</installation>

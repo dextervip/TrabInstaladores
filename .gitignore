@@ -1,6 +1,5 @@
-INSTALL.txt
-LICENSE.txt
-README.txt
-demos/
-extras/documentation
-
+*.phar
+/nbproject/private/
+/tests/log/
+/build/
+/downloads/xampp-win32-1.8.0-VC9.zip
